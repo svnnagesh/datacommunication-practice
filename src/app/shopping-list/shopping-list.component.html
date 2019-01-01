@@ -1,0 +1,19 @@
+<div class="row">
+    <div class="col-sm-10">
+        <app-shopping-edit (ingredientAdded)="onIngredientAdded($event)"></app-shopping-edit>
+        <hr>
+        <ul class="list-group">
+            <a class="list-group-item" *ngFor="let ingredient of ingredients">
+                {{ingredient.name}} <strong>({{ingredient.amount}})</strong>
+            </a>
+        </ul>
+    </div>
+    <!--     <div class="col-sm-12">
+        <form action="">
+            <input type="text" placeholder="name" />
+            <input type="email" placeholder="email" />
+            <input type="password" placeholder="password" />
+            <input type="submit" value="Submit" />
+        </form>
+    </div> -->
+</div>

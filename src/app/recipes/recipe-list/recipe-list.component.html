@@ -1,0 +1,38 @@
+<div class="row">
+    <div class="col-sm-12">
+        <button class="btn btn-primary">New Recipe</button>
+    </div>
+</div>
+<div class="row">
+    <div class="col-sm-12">
+
+        <app-recipe-item *ngFor="let recipeEl of recipes" [recipe]="recipeEl" (recipeSelected)="onRecipeSelected(recipeEl)"></app-recipe-item>
+    </div>
+    <div class="col-sm-4" *ngFor="let Items of newUserDetails">
+        <ul class="list-group">
+            <li class="list-group-item">
+                <h4>{{Items.firstName}}</h4>
+            </li>
+            <li class="list-group-item">
+                {{Items.lastName}}
+            </li>
+            <li class="list-group-item">
+                {{Items.Age}}
+            </li>
+            <li class="list-group-item">
+                {{Items.city}}
+            </li>
+            <li class="list-group-item">
+                {{Items.pincode}}
+            </li>
+        </ul>
+    </div>
+    <div class="col-sm-12">
+        <p *ngFor="let item of myHeader">
+            {{item.menu1}} | {{item.menu2}} | {{item.menu3}}
+        </p>
+    </div>
+    <!-- <div class="col-sm-3 form-group" *ngFor="let newItem of recipes">
+        <img src="{{newItem.ImagePath}}" alt="{{newItem.name}}" class="img-responsive" />
+    </div> -->
+</div>
